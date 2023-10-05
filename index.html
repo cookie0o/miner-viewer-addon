@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="manifest" href="./manifest.json" />
+
+    <meta name="theme-color" content="#24898f"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="description" content="Site to view pool miners">
+
+    <link rel="icon" type="image/x-icon" href="./shared/res/favicon.png">
+    <title>miner-viewer (home)</title>
+
+
+    <!-- shared CSS -->
+    <link rel="stylesheet" href="./shared/css/color-variables.css">
+    <link rel="stylesheet" href="./shared/css/style.css">
+    <link rel="stylesheet" href="./shared/css/scrollbar.css">
+    <link rel="stylesheet" href="./shared/css/menu.css">
+    <!-- CSS -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css' defer>
+    <link rel="stylesheet" href="./homePage/css/blocks.css">
+    <link rel="stylesheet" href="./homePage/css/miners.css">
+  </head>
+
+  <script type="module" src="./shared/js/lists.js"></script>
+  <script type="module" src="./lib/jquery-3.6.1.min.js"></script>
+
+  <!-- menu -->
+  <div class="menu">
+    <nav>
+      <navitem class="active"><i class="fi fi-rr-home"></i>Home</navitem>
+      <a href="./paymentsPage/paymentsPage.html"><navitem><i class="fi fi-rr-donate"></i>Payments</navitem></a>
+      <a href="./settingsPage/settingsPage.html"><navitem><i class="fi fi-rr-settings"></i>Settings</navitem></a>
+    </nav>
+  </div>
+
+  <!-- main site content -->
+  <body>
+    <main id="main">
+      <div class="value-blocks">
+        <!-- balance -->
+        <div class="balance">
+          <p class="header">Balance</p>
+          <div class="content">
+            <p class="xmr-balance" id="xmr-amount"></p>
+            <p class="currency-balance" id="amount"></p>        
+          </div>
+        </div>
+        <!-- hashrate -->
+        <div class="hashrate">
+          <p class="header">Hashrate</p>
+          <div class="content">
+            <p class="current-hashrate" id="hashrate"></p>   
+            <p class="avg-hashrate" id="avg_hashrate"></p>  
+          </div>
+        </div>
+        <!-- last block reward -->
+        <div class="last-block-reward">
+          <p class="header">Last Block Reward</p>
+          <div class="content">
+            <p class="-last-block-reward" id="last-block-reward"></p>   
+          </div>
+        </div>
+        <!-- total hashes submitted -->
+        <div class="total-hashes-submitted">
+          <p class="header">Total Hashes Submitted</p>
+          <div class="content">
+            <p class="-total-hashes-submitted" id="submitted-hashes"></p>   
+          </div>
+        </div>
+      </div>
+      <!-- miners -->
+      <p class="title">Your Rig`s</p>
+      <div class="headercontainer">
+        <div class="header">
+          <div class="title2"> 
+            <p class="big">🔑 Worker</p>
+          </div>
+          <div class="definition"> 
+              <p class="big">⏲ Hashrate</p>          
+          </div>
+        </div>
+        <div class="rigs">
+          <div class="rigscontainer"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <!-- JS -->
+  <script type="module" src="./homePage/js/script.js"></script>
+  <script type="module" src="./web/renderGraphs.js"></script>
+  <!-- JS pools -->
+  <script type="module" src="./web/xmrpool_eu.js"></script>
+  <script type="module" src="./web/nanopool_org.js"></script>
+</html>

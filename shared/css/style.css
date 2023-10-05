@@ -1,0 +1,11 @@
+main {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  width: 300px;
+  height: 500px;
+
+  padding-top: 35px;
+}

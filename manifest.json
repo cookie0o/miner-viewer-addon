@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "author": "https://github.com/cookie0o",
+  "name": "miner-viewer",
+  "description": "miner-viewer addon for https://cookie0o.github.io/miner-viewer/",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "/shared/res/favicon.png",
+      "32": "/shared/res/favicon.png"
+    }
+  }
+}

@@ -1,0 +1,156 @@
+.value-blocks {
+  width: 100%;
+  }
+  .value-blocks .balance {
+    position: absolute;
+    background-color: var(--primary);
+
+    border-radius: 10px;
+    width: 100%;
+    height: 70px;
+  }
+  .value-blocks .balance .header {
+    position: absolute;
+    top: -16px;
+    left: 0;
+
+    padding-top: 3px;
+    padding-left: 5px;
+
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: bolder;
+  }
+  .value-blocks .balance .content p {
+    position: absolute;
+    text-align: left;
+
+    padding-top: 0px;
+    padding-left: 5px;
+
+    font-size: 20px;
+  }
+  .value-blocks .balance .content .xmr-balance {
+    top: 0;
+  } 
+  .value-blocks .balance .content .currency-balance {
+    top: 25px;
+  }
+  
+
+  .value-blocks .hashrate {
+    position: absolute;
+    background-color: var(--primary);
+
+    border-radius: 10px;
+    width: 100%;
+    height: 70px;
+
+    top: 80px;
+  }
+  .value-blocks .hashrate .header {
+    position: absolute;
+    top: -16px;
+    left: 0;
+
+    padding-top: 3px;
+    padding-left: 5px;
+
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: bolder;
+  }
+  .value-blocks .hashrate .content p {
+    position: absolute;
+
+    text-align: left;
+
+    padding-top: 0px;
+    padding-left: 5px;
+
+    font-size: 20px;
+  }
+  .value-blocks .hashrate .content .current-hashrate {
+    position: absolute;
+    top: 0px;
+  } 
+  .value-blocks .hashrate .content .avg-hashrate {
+    position: absolute;
+    top: 25px;
+  }
+
+
+  .value-blocks .last-block-reward {
+    position: absolute;
+    background-color: var(--primary);
+
+    border-radius: 10px;
+    width: 100%;
+    height: 48px;
+
+    top: 160px;
+  }
+  .value-blocks .last-block-reward .header {
+    position: absolute;
+    top: -16px;
+    left: 0;
+
+    padding-top: 3px;
+    padding-left: 5px;
+
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: bolder;
+  }
+  .value-blocks .last-block-reward .content p {
+    position: absolute;
+
+    text-align: left;
+
+    padding-top: 0px;
+    padding-left: 5px;
+
+    font-size: 20px;
+  }
+  .value-blocks .last-block-reward .content .-last-block-reward{
+    position: absolute;
+    top: 3px;
+  }
+
+
+  .value-blocks .total-hashes-submitted {
+    position: absolute;
+    background-color: var(--primary);
+
+    border-radius: 10px;
+    width: 100%;
+    height: 48px;
+
+    top: 220px;
+  }
+  .value-blocks .total-hashes-submitted .header {
+    position: absolute;
+    top: -16px;
+    left: 0;
+
+    padding-top: 3px;
+    padding-left: 5px;
+
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: bolder;
+  }
+  .value-blocks .total-hashes-submitted .content p {
+    position: absolute;
+
+    text-align: left;
+
+    padding-top: 0px;
+    padding-left: 5px;
+
+    font-size: 20px;
+  }
+  .value-blocks .total-hashes-submitted .content .-total-hashes-submitted{
+    position: absolute;
+    top: 3px;
+  }

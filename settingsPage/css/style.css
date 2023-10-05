@@ -1,0 +1,54 @@
+/* Styling */
+.settings .setting p {
+  font-size: 17px;
+
+  margin-bottom: 3px;
+  padding-bottom: 3px;
+}
+
+.settings .setting textarea {
+  color: var(--text);
+  font-size: 15px;
+
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  outline: none;
+
+  flex: 1 0 0;
+  
+  width: 245px;
+  height: 50px;
+}
+
+.settings .setting select {
+  color: var(--text);
+  font-size: 15px;
+
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  outline: none;
+  flex: 1 0 0;
+
+  width: 285px;
+}   
+
+.settings .setting button {
+  color: var(--text);
+  font-size: 15px;
+
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  outline: none;
+  flex: 1 0 0;
+
+  width: 285px;
+} .settings .setting button:hover {
+  background-color: var(--primary);
+}
+

@@ -1,0 +1,87 @@
+.headercontainer {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 0;
+  margin-top: 0;
+
+  position: relative;
+  top: -8px;
+}
+
+.headercontainer .header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.headercontainer .header .title2 {
+  padding: 0px 3cqb;
+  width: 110px;
+}
+
+.headercontainer .header .definition {
+  text-align: right;
+  padding: 0px 3cqb;
+}
+
+.headercontainer .header .big {font-size: 16px;}
+
+
+.title {
+  padding-top: 275px;
+  font-size: 20px;
+
+  margin-bottom: 0;
+}
+
+
+.rigscontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  position: relative;
+  top: -10px;
+}
+
+.rigscontainer .rig {
+  display: flex;
+  align-items: center;
+
+  padding: 0px 3cqb;
+  border-radius: 20px;
+ 
+  background-color: var(--secondary);
+  transition: box-shadow 250ms, background-color 250ms;
+}
+
+.rigscontainer .rig:not(.active) {
+  background-color: transparent;
+
+  background-color: var(--gray);
+  color: var(--text-gray);
+}
+
+.rigscontainer .rig:is(.active):hover {
+  background-color: var(--secondary);
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.rigscontainer .rig .name {
+  font-size: 18px;
+  width: 150px;
+}
+
+.rigscontainer .rig .data {
+  width: 100%;
+
+  text-align: right;
+  padding: 0px 3cqb;
+}
+
+.rigscontainer .rig .big {font-size: 16px;}
+
+.rigscontainer .rig .column.right {
+  text-align: end;
+}

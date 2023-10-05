@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="manifest" href="../manifest.json" />
+
+    <meta name="theme-color" content="#24898f"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="description" content="Site to view pool miners">
+    
+    <link rel="icon" type="image/x-icon" href="../shared/res/favicon.png">
+    <title>miner-viewer (Payments)</title>
+
+    <!-- shared CSS -->
+    <link rel="stylesheet" href="../shared/css/color-variables.css">
+    <link rel="stylesheet" href="../shared/css/style.css">
+    <link rel="stylesheet" href="../shared/css/scrollbar.css">
+    <link rel="stylesheet" href="../shared/css/menu.css">
+    <!-- CSS -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css' defer>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/payments.css">
+  </head>
+
+  <script type="module" src="../shared/js/lists.js"></script>
+  <script type="module" src="../lib/jquery-3.6.1.min.js"></script>
+
+  <!-- menu -->
+  <div class="menu">
+    <nav>
+      <a href="../index.html"><navitem><i class="fi fi-rr-home"></i>Home</navitem></a>
+      <navitem class="active"><i class="fi fi-rr-donate"></i>Payments</navitem>
+      <a href="../settingsPage/settingsPage.html"><navitem><i class="fi fi-rr-settings"></i>Settings</navitem></a>
+    </nav>
+  </div>
+
+  <!-- main site content -->
+  <body>
+    <main id="main">
+      <div class="payments">
+        <!-- total paid -->
+        <div class="value-block">
+          <div class="total-paid">
+            <p class="header">Total Paid:</p>
+              <div class="content">
+                <p class="full-total-paid" id="total_paid"></p>   
+              </div>
+            </div>
+          <div>
+        <div>
+
+        <p class="title">Your Pool Payments:</p>
+
+        <!-- payments (in blocks) -->
+        <div class="paymentscontainer"></div>
+    </main>
+  </body>
+  <!-- shared JS -->
+  <script type="module" src="../web/payments.js"></script>
+  <!-- JS -->
+  <script src="./js/script.js"></script>
+</html>

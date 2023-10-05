@@ -1,0 +1,52 @@
+/* Dark Mode */
+:root {
+  --text-light: #041010;
+  --background-light: #fbfefe;
+  --primary-light: #24898f;
+  --secondary-light: #e6f8f9;
+  --accent-light: #011f20;
+  --gray-light: #f5f5f5;
+  --text-gray-light: #a5a5a5;
+}
+
+/* Light Mode */
+:root {
+  --text-dark: #fbfefe;
+  --background-dark: #041010;
+  --primary-dark: #24898f;
+  --secondary-dark: #0e3739;
+  --accent-dark: #011f20;
+  --gray-dark: #061616;
+  --text-gray-dark: #184d4d;
+}
+  
+/* Media queries for system-level color scheme preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--background-dark);
+    --text: var(--text-dark);
+    --primary: var(--primary-dark);
+    --secondary: var(--secondary-dark);
+    --accent: var(--accent-dark);
+    --gray: var(--gray-dark);
+    --text-gray: var(--text-gray-dark)
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--background-light);
+    --text: var(--text-light);
+    --primary: var(--primary-light);
+    --secondary: var(--secondary-light);
+    --accent: var(--accent-light);
+    --gray: var(--gray-light);
+    --text-gray: var(--text-gray-light)
+  }
+}
+
+/* Styling */
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
