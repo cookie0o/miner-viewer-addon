@@ -1,5 +1,5 @@
 # A add-on for simultaneously viewing your miners, payments, and more from different pools.
-View at (Website Version): [https://sch-raphael.github.io/miner-viewer](https://sch-raphael.github.io/miner-viewer)
+View at (Website Version): [https://cookie0o.github.io/miner-viewer](https://cookie0o.github.io/miner-viewer)
 you can download and install a release from the releases tab!
 
 ## addon
