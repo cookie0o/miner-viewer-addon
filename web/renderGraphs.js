@@ -18,21 +18,6 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// clear Rigs Container and reset scrollbar position
-function reset() {
-  // Get the current scrollbar position
-  let oldPos = window.scrollY;
-
-  // Clear the rigs container
-  $(".rigscontainer").empty();
-
-  // Restore the scrollbar position after delay
-  sleep(100).then(() => { 
-    window.scrollTo(0, oldPos);
-   });
-}
-
-
 // get all values for the graphs from storage
 function values() {
   // Retrieve values from local storage
@@ -84,17 +69,12 @@ function values() {
 import {
   init_xmrpool_eu
 } from "./xmrpool_eu.js";
-import {
-  init_nanopool_org
-} from "./nanopool_org.js";
+
 
 // render miners and graphs
 async function render() {
-  // clear miner list for new render
-  reset();
   // render miners
   init_xmrpool_eu();
-  init_nanopool_org();
   // render graphs
   renderGraphs(values(), existingData);
 }

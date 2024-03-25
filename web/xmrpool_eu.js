@@ -7,7 +7,6 @@ import {
   trimString_x, // (string, length)
 } from '../shared/js/functions.js';
 
-
 function xmrpool_eu_saving(walletDetails) {
   var balance = walletDetails.stats.balance;
   if (balance == undefined || isNaN(balance)) {balance = 0} else {
@@ -54,17 +53,20 @@ export {init_xmrpool_eu}
 
 
 function renderRigs(walletDetails) {
-  // loop through every miner
-  for (let i = 0; i < walletDetails.perWorkerStats.length; i++) {
+  var numberOfExistingElements = $(".rigscontainer #rig_xmrpool_eu").length;
+  var requiredNumberOfElements = walletDetails.perWorkerStats.length;
 
-    // sort list
+  // loop through every miner
+  for (let i = 0; i < requiredNumberOfElements; i++) {
+
+    // Sort list
     walletDetails.perWorkerStats.sort((a, b) => unformatHashrate(b.hashrate) - unformatHashrate(a.hashrate))
 
-    // definitions
+    // Definitions
     var workerId       = walletDetails.perWorkerStats[i].workerId
     var Hashrate       = walletDetails.perWorkerStats[i].hashrate
 
-    // check if miner is active
+    // Check if miner is active
     let active = (Hashrate === undefined) ? false : true;
     let activeClass = (active) ? "active" : "";
     let HashrateFull = (active) ? Hashrate : "0 H";
@@ -74,13 +76,29 @@ function renderRigs(walletDetails) {
 
     workerIdFull = trimString_x(workerId, 8);
 
-    $(".rigscontainer").append(`
-    <div class="rig ${activeClass}">
-      <p class="name">${workerIdFull}</p>
-      <div class="data">
-        <p class="big">${HashrateFull}/s</p>
-      </div>
-    </div>
-    `);
+    // Find existing element and update its content if it exists
+    var $existingRig = $(".rigscontainer #rig_xmrpool_eu").eq(i);
+    if ($existingRig.length > 0) {
+      // Update the content of existing element
+      $existingRig.html(`
+        <p class="name">${workerIdFull}</p>
+        <div class="data">
+          <p class="big">${HashrateFull}/s</p>
+        </div>
+      `);
+    } else {
+      // Create a new element
+      $(".rigscontainer").append(`
+        <div class="rig ${activeClass}" id="rig_xmrpool_eu">
+          <p class="name">${workerIdFull}</p>
+          <div class="data">
+            <p class="big">${HashrateFull}/s</p>
+          </div>
+        </div>
+      `);
+    }
   }
+
+  // Remove extra elements if there are more existing elements than required
+  $(".rigscontainer #rig_xmrpool_eu").slice(requiredNumberOfElements).remove();
 }
