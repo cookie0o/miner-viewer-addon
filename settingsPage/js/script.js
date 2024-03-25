@@ -8,10 +8,17 @@ function UpdateAddress() {
 document.getElementById('xmraddress').addEventListener('input', UpdateAddress);
 
 // Save Currency Code
-if (localStorage.getItem("currency") !== null) {$("#currencySelect").val(localStorage.getItem("currency"));}
+if (localStorage.getItem("currency") !== null) {
+  $("#currencySelect").val(localStorage.getItem("currency"));
+} else {
+  $("#currencySelect").val("Euro (EUR)");
+}
+
 
 $("#currencySelect").on("change", function() {
   localStorage.setItem("currency", $(this).val());
+  // force XMR Price update
+  localStorage.setItem("ForcePriceUpdate", true);
 });
 
 // donate btn
