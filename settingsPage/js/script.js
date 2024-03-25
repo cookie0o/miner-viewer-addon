@@ -12,6 +12,9 @@ if (localStorage.getItem("currency") !== null) {
   $("#currencySelect").val(localStorage.getItem("currency"));
 } else {
   $("#currencySelect").val("Euro (EUR)");
+  localStorage.setItem("currency", "Euro (EUR)");
+  // force XMR Price update
+  localStorage.setItem("ForcePriceUpdate", true);
 }
 
 
