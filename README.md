@@ -8,9 +8,9 @@ Your Miners everywhere you browse!
   <img src="https://github.com/cookie0o/miner-viewer-addon/assets/81589649/e7fa7b22-33ec-4af0-9a29-4a9f5d689134" style="height: 250px;"> 
 </div>    
 
-#### Supported Pools
-[xmrpool](https://web.xmrpool.eu), [nanopool](https://xmr.nanopool.org) (beta/partial supp.!)  
-(more in the future!)
+#### Supported Pools (only MONERO[XMR])
+[xmrpool](https://web.xmrpool.eu) (main/good supp.!)   
+[2miners](https://2miners.com) [nanopool](https://xmr.nanopool.org)  (beta/partial supp.!) (more in the future!)
 
 ## Contributors
 Thanks to [WBR_K](https://github.com/wbrk-dev) for the idea and base code!
