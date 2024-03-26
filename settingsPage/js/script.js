@@ -1,14 +1,20 @@
 // Save XMR address
-if (localStorage.getItem("moneroXMR_address") !== null) {$("textarea#xmraddress").val(localStorage.getItem("moneroXMR_address"))}
+if (localStorage.getItem("moneroXMR_address") !== null) {$("textarea#xmraddress").val(localStorage.getItem("moneroXMR_address"))};
 
 
 function UpdateAddress() {
   localStorage.setItem("moneroXMR_address", $(this).val());
-}
+};
 document.getElementById('xmraddress').addEventListener('input', UpdateAddress);
 
+$("#currencySelect").on("change", function() {
+  localStorage.setItem("currency", $(this).val());
+  // force XMR Price update
+  localStorage.setItem("ForcePriceUpdate", true);
+});
+
 // Save Currency Code
-if (localStorage.getItem("currency") !== null) {
+if (localStorage.getItem("currency") !== "null") {
   $("#currencySelect").val(localStorage.getItem("currency"));
 } else {
   $("#currencySelect").val("Euro (EUR)");
@@ -16,13 +22,6 @@ if (localStorage.getItem("currency") !== null) {
   // force XMR Price update
   localStorage.setItem("ForcePriceUpdate", true);
 }
-
-
-$("#currencySelect").on("change", function() {
-  localStorage.setItem("currency", $(this).val());
-  // force XMR Price update
-  localStorage.setItem("ForcePriceUpdate", true);
-});
 
 // donate btn
 document.getElementById('donate_btn').addEventListener('click', function() {
