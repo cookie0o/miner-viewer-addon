@@ -1,0 +1,109 @@
+.payment-block {
+  margin-top: 10px;
+  width: 100%;
+  height: 90px;
+  background-color: var(--primary);
+
+  border-radius: 10px;
+  gap: 10px;
+  }
+  .payment-block .header1-container {
+    display: inline-flex;
+    justify-content: space-between;
+    height: 10px;
+    }
+    .payment-block .header1-container p  {
+      color: var(--secondary);
+      font-size: 16px;
+      font-weight: bolder;
+
+      padding: 22px;
+      padding-top: 1px;
+      margin-top: 2px;
+    }
+    .payment-block .content {
+      display: inline-flex;
+      justify-content: space-evenly;
+      
+      width: 100%;
+      height: 20px;
+      }
+      .payment-block .content .img {
+        float: left;
+
+        width: 20px;
+        height: 20px;
+
+        position: absolute;
+        left: 28px;
+      }
+      .payment-block .content .amount {
+        text-align: right;
+
+        color: var(--text);
+        font-size: 20px;
+
+        padding-top: 0;
+        margin-top: 0;
+
+        position: absolute;
+        right: 27px;
+      }
+      .payment-block .content .mixin {
+        text-align: right;
+
+        color: var(--text);
+        font-size: 20px;
+
+        padding-top: 0;
+        margin-top: 0;
+
+        position: absolute;
+        right: 152px;
+  }
+  .payment-block .header2-container {
+    display: inline-flex;
+    justify-content: space-between;
+    height: 10px;
+    padding-top: 2px;
+    }
+    .payment-block .header2-container p  {
+      color: var(--secondary);
+      font-size: 16px;
+      font-weight: bolder;
+
+      padding: 20px;
+      padding-top: 1px;
+      margin-top: 1px;
+    }
+    .payment-block .content2 {
+      display: inline-flex;
+      justify-content: space-evenly;
+      
+      width: 100%;
+      height: 20px;
+      }
+      .payment-block .content2 .hash {
+        text-align: right;
+
+        color: blue;
+        font-size: 20px;
+
+        padding-top: 0;
+        margin-top: 0;
+
+        position: absolute;
+        left: 7px;
+      }
+      .payment-block .content2 .date {
+        text-align: right;
+
+        color: var(--text);
+        font-size: 20px;
+
+        padding-top: 0;
+        margin-top: 0;
+
+        position: absolute;
+        right: 10px;
+}

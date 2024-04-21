@@ -5,6 +5,24 @@ import {
 } from '../shared/js/functions.js';
 
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// clear Payments Container and reset scrollbar position
+function reset() {
+  // Get the current scrollbar position
+  let oldPos = window.scrollY;
+
+  // Clear the Payments container
+  $(".paymentscontainer").empty();
+
+  // Restore the scrollbar position after delay
+  sleep(100).then(() => { 
+    window.scrollTo(0, oldPos);
+   });
+}
+
 // get stored values
 const XMR_address = localStorage.getItem("moneroXMR_address"); // xmr address
 
@@ -45,9 +63,10 @@ function total_paid() {
 
 // run functions every 5 sek. and on page load once
 payments_xmrpool_eu()
-payments_nanopool_org()
 total_paid()
 setInterval(() => {
+  // clear payments list for new render
+  reset()
   // render
   payments_xmrpool_eu()
   total_paid()

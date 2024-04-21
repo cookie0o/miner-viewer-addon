@@ -3,7 +3,7 @@
   "author": "https://github.com/cookie0o",
   "name": "miner-viewer",
   "description": "miner-viewer addon for https://cookie0o.github.io/miner-viewer/",
-  "version": "1.0",
+  "version": "1.1.1",
   "action": {
     "default_popup": "index.html",
     "default_icon": {
